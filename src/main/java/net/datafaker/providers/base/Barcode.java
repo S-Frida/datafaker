@@ -17,6 +17,10 @@ public class Barcode extends AbstractProvider<BaseProviders> {
         return ean(8);
     }
 
+    public long ean10() {
+        return ean(10);
+    }
+
     public long gtin14() {
         return ean(14);
     }

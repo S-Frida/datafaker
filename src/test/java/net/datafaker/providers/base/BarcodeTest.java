@@ -89,4 +89,10 @@ class BarcodeTest extends BaseFakerTest<BaseFaker> {
 
         assertThat(String.valueOf(sum)).endsWith("0");
     }
+
+    @Test
+    void testInvalidEanLength(){
+        long barcode = faker.barcode().ean10();
+        assertThat(barcode).isEqualTo(0);
+    }
 }
